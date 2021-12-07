@@ -31,7 +31,7 @@ const airDampVal = 0.01;
 const waterDampVal = 0.1;
 
 //bubbles
-const bubblesAmount = 50;
+const bubblesAmount = 10;
 
 //water shape
 const waterLineHeightFraction = 0.4;

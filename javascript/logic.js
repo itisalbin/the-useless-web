@@ -232,8 +232,8 @@ function createBubbles() {
       new bubble(
         Math.random() * canvasWidth,
         canvasHeight + Math.random() * 500,
-        Math.random() * 6 + 2,
-        0.03
+        Math.random() * 2 + 2,
+        0.2
       )
     );
   }
