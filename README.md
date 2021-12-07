@@ -2,7 +2,7 @@ INSERT MANDATORY GIF
 
 # The Useless Web
 
-[albinsuselessweb.netlify.com]
+[Link](http://albinsuselessweb.netlify.com)
 
 # Installation
 
