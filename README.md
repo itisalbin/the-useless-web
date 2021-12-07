@@ -1,12 +1,12 @@
 INSERT MANDATORY GIF
 
-# Project Title
+# The Useless Web
 
-Text about the project. This would also be a great place to link the game on Netlify.
+[albinsuselessweb.netlify.com]
 
 # Installation
 
-Add the installation instructions.
+Should work on all modern browsers.
 
 # Code Review
 
