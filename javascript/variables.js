@@ -15,7 +15,7 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 let mousePos = new vector2(10000, 10000);
 let circles = [];
-let bombs = [];
+let bubbles = [];
 let waterPhaseValue = 0;
 let mouseIsDown = false;
 let isEmptying = false;
@@ -26,10 +26,12 @@ let canvasWidth = window.innerWidth;
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 
-//circles
-const circleAmount = clamp(Math.round(canvasWidth / 20), 10, 50);
+//damping
 const airDampVal = 0.01;
 const waterDampVal = 0.1;
+
+//bubbles
+const bubblesAmount = 50;
 
 //water shape
 const waterLineHeightFraction = 0.4;

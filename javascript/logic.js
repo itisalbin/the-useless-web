@@ -25,7 +25,23 @@ function loop() {
   checkCircleCollisionsAndMouse();
   calculateAndDrawWater(waterPhaseValue);
   calculateAndDrawCircles(waterPhaseValue, isEmptying);
+
+  for (let i = bubbles.length - 1; i >= 0; i--) {
+    const wH =
+      getWaterHeight(bubbles[i].position.x, 100) +
+      canvasHeight * waterLineHeightFraction;
+    if (bubbles[i].position.y > wH) {
+      bubbles[i].addBuoyancy(new vector2(0, -1));
+      bubbles[i].damp(waterDampVal);
+      bubbles[i].updatePosition();
+    } else {
+      bubbles.splice(i, 1);
+    }
+    bubbles[i].draw();
+  }
 }
+
+createBubbles();
 
 //CALCULATE AND DRAW WATER
 function calculateAndDrawWater(waterPhaseValue) {
@@ -208,4 +224,17 @@ function setCanvasSizeToBrowserDimensions() {
   canvasWidth = window.innerWidth;
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
+}
+
+function createBubbles() {
+  for (let i = 0; i < bubblesAmount; i++) {
+    bubbles.push(
+      new bubble(
+        Math.random() * canvasWidth,
+        canvasHeight + Math.random() * 500,
+        Math.random() * 6 + 2,
+        0.03
+      )
+    );
+  }
 }
