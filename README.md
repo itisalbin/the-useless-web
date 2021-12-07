@@ -2,7 +2,7 @@
 
 # The Useless Web
 
-A school project about creating a 'useless' web page in javascript. This is my first try with the html5 canvas object.
+A school project about creating a 'useless' web page in javascript. This was my first try with the html5 canvas object.
 
 [Link to page](http://albinsuselessweb.netlify.com)
 
