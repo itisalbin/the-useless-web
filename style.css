@@ -4,14 +4,21 @@
     url('fonts/SulphurPoint-Light.woff') format('woff');
 }
 
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --main-header-color: rgb(255, 255, 255);
   --text-color: rgb(255, 255, 255);
   --main-font: 'SulphurPoint';
+}
+
+* {
+  box-sizing: border-box;
+  /* Make text not selectable. */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 html,
@@ -32,14 +39,6 @@ body {
   flex-direction: column;
   align-items: center;
   transition: all 1s linear;
-
-  /* Make text not selectable. */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 h1 {
