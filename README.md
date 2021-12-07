@@ -1,8 +1,10 @@
-INSERT MANDATORY GIF
+<img src="https://media.giphy.com/media/3oKIPeK7hRcDBwVFJu/giphy.gif" width=50%>
 
 # The Useless Web
 
-[Link](http://albinsuselessweb.netlify.com)
+A school project about creating a 'useless' web page in javascript. This is my first try with the html5 canvas object.
+
+[Link to page](http://albinsuselessweb.netlify.com)
 
 # Installation
 
