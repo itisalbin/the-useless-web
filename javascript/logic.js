@@ -41,8 +41,6 @@ function loop() {
   }
 }
 
-createBubbles();
-
 //CALCULATE AND DRAW WATER
 function calculateAndDrawWater(waterPhaseValue) {
   context.lineWidth = 1;
@@ -226,14 +224,14 @@ function setCanvasSizeToBrowserDimensions() {
   canvas.height = canvasHeight;
 }
 
-function createBubbles() {
-  for (let i = 0; i < bubblesAmount; i++) {
+function createBubbles(amount) {
+  for (let i = 0; i < amount; i++) {
     bubbles.push(
       new bubble(
         Math.random() * canvasWidth,
         canvasHeight + Math.random() * 500,
-        Math.random() * 2 + 2,
-        0.2
+        Math.random() * 3 + 2,
+        0.15
       )
     );
   }

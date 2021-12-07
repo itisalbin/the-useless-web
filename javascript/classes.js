@@ -68,7 +68,7 @@ class bubble {
   }
 
   draw(r, g, b) {
-    context.strokeStyle = 'rgba(255, 255, 255, 0.25)';
+    context.strokeStyle = `rgba(255, 255, 255, ${0.6 - this.mass * this.mass})`;
     context.lineWidth = 1;
     context.beginPath();
     context.arc(this.position.x, this.position.y, this.radius, 0, 2 * Math.PI);

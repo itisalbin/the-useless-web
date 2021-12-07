@@ -119,7 +119,9 @@ document.body.addEventListener(
 const emptyButton = document.querySelector('button');
 emptyButton.addEventListener('click', () => {
   empty();
-  createBubbles();
+  setTimeout(() => {
+    createBubbles(25);
+  }, 550);
 });
 
 function removeStartText() {
