@@ -9,15 +9,15 @@
 
 //***MOUSE***
 //MOUSE DOWN
-canvas.addEventListener("mousedown", () => {
+canvas.addEventListener('mousedown', () => {
   mouseIsDown = true;
 });
 //MOUSE UP
-canvas.addEventListener("mouseup", () => {
+canvas.addEventListener('mouseup', () => {
   mouseIsDown = false;
 });
 //MOUSE MOVE
-canvas.addEventListener("mousemove", (e) => {
+canvas.addEventListener('mousemove', (e) => {
   mousePos = getMousePos(canvas, e);
 });
 
@@ -32,10 +32,10 @@ function getMousePos(canvas, mouseEvent) {
 
 //***TOUCH***
 //TOUCH START
-canvas.addEventListener("touchstart", (e) => {
+canvas.addEventListener('touchstart', (e) => {
   mousePos = getTouchPos(canvas, e);
   var touch = e.touches[0];
-  var mouseEvent = new MouseEvent("mousedown", {
+  var mouseEvent = new MouseEvent('mousedown', {
     clientX: touch.clientX,
     clientY: touch.clientY,
   });
@@ -43,14 +43,14 @@ canvas.addEventListener("touchstart", (e) => {
   tapHandler(e);
 });
 //TOUCH END
-canvas.addEventListener("touchend", () => {
-  var mouseEvent = new MouseEvent("mouseup", {});
+canvas.addEventListener('touchend', () => {
+  var mouseEvent = new MouseEvent('mouseup', {});
   canvas.dispatchEvent(mouseEvent);
 });
 //TOUCH MOVE
-canvas.addEventListener("touchmove", (e) => {
+canvas.addEventListener('touchmove', (e) => {
   var touch = e.touches[0];
-  var mouseEvent = new MouseEvent("mousemove", {
+  var mouseEvent = new MouseEvent('mousemove', {
     clientX: touch.clientX,
     clientY: touch.clientY,
   });
@@ -67,7 +67,7 @@ function getTouchPos(canvas, touchEvent) {
 }
 
 //DOUBLE CLICK
-canvas.addEventListener("dblclick", () => {
+canvas.addEventListener('dblclick', () => {
   addCircleToCanvas(mousePos.x + instantiateCircleOffsetDistance, -100);
   removeStartText();
 });
@@ -89,7 +89,7 @@ function tapHandler(event) {
 
 // Prevent scrolling when touching the canvas
 document.body.addEventListener(
-  "touchstart",
+  'touchstart',
   (e) => {
     if (e.target == canvas) {
       e.preventDefault();
@@ -98,7 +98,7 @@ document.body.addEventListener(
   { passive: false }
 );
 document.body.addEventListener(
-  "touchend",
+  'touchend',
   (e) => {
     if (e.target == canvas) {
       e.preventDefault();
@@ -107,7 +107,7 @@ document.body.addEventListener(
   { passive: false }
 );
 document.body.addEventListener(
-  "touchmove",
+  'touchmove',
   (e) => {
     if (e.target == canvas) {
       e.preventDefault();
@@ -116,23 +116,23 @@ document.body.addEventListener(
   { passive: false }
 );
 
-const emptyButton = document.querySelector("button");
-emptyButton.addEventListener("click", () => {
+const emptyButton = document.querySelector('button');
+emptyButton.addEventListener('click', () => {
   empty();
 });
 
 function removeStartText() {
-  const textContainer = document.querySelector(".text-container");
-  if (!textContainer.classList.contains("fade")) {
-    textContainer.classList.add("fade");
+  const textContainer = document.querySelector('.text-container');
+  if (!textContainer.classList.contains('fade')) {
+    textContainer.classList.add('fade');
     setTimeout(() => {
-      textContainer.style.display = "none";
+      textContainer.style.display = 'none';
     }, 1000);
   }
-  const emptyButton = document.querySelector("button");
-  if (!emptyButton.classList.contains("fade-up")) {
+  const emptyButton = document.querySelector('button');
+  if (!emptyButton.classList.contains('fade-up')) {
     setTimeout(() => {
-      emptyButton.classList.add("fade-up");
+      emptyButton.classList.add('fade-up');
     }, 2000);
   }
 }

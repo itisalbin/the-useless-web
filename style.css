@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "SulphurPoint";
-  src: url("fonts/SulphurPoint-Light.woff2") format("woff2"),
-    url("fonts/SulphurPoint-Light.woff") format("woff");
+  font-family: 'SulphurPoint';
+  src: url('fonts/SulphurPoint-Light.woff2') format('woff2'),
+    url('fonts/SulphurPoint-Light.woff') format('woff');
 }
 
 * {
@@ -11,7 +11,7 @@
 :root {
   --main-header-color: rgb(255, 255, 255);
   --text-color: rgb(255, 255, 255);
-  --main-font: "SulphurPoint";
+  --main-font: 'SulphurPoint';
 }
 
 html,

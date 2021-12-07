@@ -8,8 +8,8 @@
 //This script holds most of the variables for the application's logic.
 //(Some are hard coded into the logic, where convenient.)
 
-const canvas = document.getElementById("canvas");
-const context = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
@@ -40,14 +40,14 @@ const sineStepSize = canvasWidth / 10;
 
 //water color
 const waterGradient = context.createLinearGradient(0, 0, 0, 1000);
-waterGradient.addColorStop(0.2, "#00FFFF");
-waterGradient.addColorStop(0.5, "#0044AA");
-waterGradient.addColorStop(1, "black");
+waterGradient.addColorStop(0.2, '#00FFFF');
+waterGradient.addColorStop(0.5, '#0044AA');
+waterGradient.addColorStop(1, 'black');
 
 //sky color
 const skyGradient = context.createLinearGradient(0, 0, 0, canvasHeight * 0.5);
-skyGradient.addColorStop(0, "#4488FF");
-skyGradient.addColorStop(1, "white");
+skyGradient.addColorStop(0, '#4488FF');
+skyGradient.addColorStop(1, 'white');
 
 //mouse
 const mouseforceStrength = -50;
