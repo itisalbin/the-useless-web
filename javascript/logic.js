@@ -43,7 +43,6 @@ function loop() {
 
 //CALCULATE AND DRAW WATER
 function calculateAndDrawWater(waterPhaseValue) {
-  context.lineWidth = 1;
   context.fillStyle = waterGradient;
   context.beginPath();
   let sineHeight = getWaterHeight(0, waterPhaseValue);

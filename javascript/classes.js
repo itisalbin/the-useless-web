@@ -67,7 +67,7 @@ class bubble {
     this.mass = radius * massRadiusRatio;
   }
 
-  draw(r, g, b) {
+  draw() {
     context.strokeStyle = `rgba(255, 255, 255, ${0.6 - this.mass * this.mass})`;
     context.lineWidth = 1;
     context.beginPath();
